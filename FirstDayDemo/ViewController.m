@@ -8,7 +8,10 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (strong, nonatomic) NSArray *studentArray;
 
 @end
 
@@ -17,13 +20,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *student1 = @"Tim";
+    NSString *student2 = @"Brad";
+    NSString *student3 = @"Clark";
+    
+    self.studentArray = @[student1, student2, student3];
+    
+    self.myTableView.delegate = self;
+    self.myTableView.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return [self.studentArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
+    
+    cell.textLabel.text = self.studentArray[indexPath.row];
+    
+    return cell;
 }
 
 @end
