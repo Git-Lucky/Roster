@@ -1,5 +1,5 @@
 //
-//  TableViewController.h
+//  CodePeepsViewController.h
 //  FirstDayDemo
 //
 //  Created by Tim Hise on 1/13/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewController : UITableViewController
+@interface CodePeepsViewController : UITableViewController
 
 @end

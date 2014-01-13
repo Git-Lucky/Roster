@@ -21,7 +21,8 @@
 		0E32811B188460A70082630E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3280FD188460A70082630E /* UIKit.framework */; };
 		0E328123188460A70082630E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E328121188460A70082630E /* InfoPlist.strings */; };
 		0E328125188460A70082630E /* FirstDayDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E328124188460A70082630E /* FirstDayDemoTests.m */; };
-		0E32813018847C170082630E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E32812F18847C170082630E /* TableViewController.m */; };
+		0E32813318848B850082630E /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E32813218848B850082630E /* DetailsViewController.m */; };
+		0E3281361884AAEC0082630E /* CodePeepsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3281351884AAEC0082630E /* CodePeepsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +55,10 @@
 		0E328120188460A70082630E /* FirstDayDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FirstDayDemoTests-Info.plist"; sourceTree = "<group>"; };
 		0E328122188460A70082630E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E328124188460A70082630E /* FirstDayDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstDayDemoTests.m; sourceTree = "<group>"; };
-		0E32812E18847C170082630E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		0E32812F18847C170082630E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		0E32813118848B850082630E /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		0E32813218848B850082630E /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		0E3281341884AAEC0082630E /* CodePeepsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodePeepsViewController.h; sourceTree = "<group>"; };
+		0E3281351884AAEC0082630E /* CodePeepsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodePeepsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +118,11 @@
 		0E3280FF188460A70082630E /* FirstDayDemo */ = {
 			isa = PBXGroup;
 			children = (
-				0E328108188460A70082630E /* AppDelegate.h */,
-				0E328109188460A70082630E /* AppDelegate.m */,
 				0E32810B188460A70082630E /* Main.storyboard */,
-				0E32812E18847C170082630E /* TableViewController.h */,
-				0E32812F18847C170082630E /* TableViewController.m */,
+				0E32813118848B850082630E /* DetailsViewController.h */,
+				0E32813218848B850082630E /* DetailsViewController.m */,
+				0E3281341884AAEC0082630E /* CodePeepsViewController.h */,
+				0E3281351884AAEC0082630E /* CodePeepsViewController.m */,
 				0E32810E188460A70082630E /* ViewController.h */,
 				0E32810F188460A70082630E /* ViewController.m */,
 				0E328111188460A70082630E /* Images.xcassets */,
@@ -131,6 +134,8 @@
 		0E328100188460A70082630E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0E328108188460A70082630E /* AppDelegate.h */,
+				0E328109188460A70082630E /* AppDelegate.m */,
 				0E328101188460A70082630E /* FirstDayDemo-Info.plist */,
 				0E328102188460A70082630E /* InfoPlist.strings */,
 				0E328105188460A70082630E /* main.m */,
@@ -255,9 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E328110188460A70082630E /* ViewController.m in Sources */,
+				0E32813318848B850082630E /* DetailsViewController.m in Sources */,
 				0E32810A188460A70082630E /* AppDelegate.m in Sources */,
 				0E328106188460A70082630E /* main.m in Sources */,
-				0E32813018847C170082630E /* TableViewController.m in Sources */,
+				0E3281361884AAEC0082630E /* CodePeepsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
