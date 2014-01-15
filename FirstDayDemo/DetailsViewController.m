@@ -25,12 +25,10 @@
 
 - (void)viewDidLoad
 {
+
     [super viewDidLoad];
-    if (self.section == 0) {
-        self.title = self.studentName;
-    } else {
-        self.title = self.instructorName;
-    }
+    
+    self.title = self.studentName;
 }
 
 - (void)didReceiveMemoryWarning

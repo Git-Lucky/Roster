@@ -21,13 +21,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GK8-0k-D0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1821" y="12"/>
+            <point key="canvasLocation" x="1666" y="12"/>
         </scene>
         <!--Code Peeps View Controller-->
         <scene sceneID="5KD-tZ-VbM">
             <objects>
                 <tableViewController id="xhI-mW-Ydx" customClass="CodePeepsViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gFa-g4-t61">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gFa-g4-t61">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,7 +58,13 @@
                             <outlet property="delegate" destination="xhI-mW-Ydx" id="TBW-6B-e5a"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gn5-lN-hHF"/>
+                    <navigationItem key="navigationItem" id="gn5-lN-hHF">
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="IO7-ki-2MQ">
+                            <connections>
+                                <action selector="sortButton:" destination="xhI-mW-Ydx" id="lU0-al-xhW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="gFa-g4-t61" id="giL-uM-Thq"/>
                     </connections>
@@ -83,7 +89,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S18-3V-RZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771" y="12"/>
+            <point key="canvasLocation" x="894" y="12"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
