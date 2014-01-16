@@ -49,6 +49,13 @@
 
 }
 
+- (NSString *)documentsDirectoryPath
+{
+    NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    return [documentsURL path];
+}
+
+
 
 #pragma mark - Table view data source
 
@@ -69,6 +76,13 @@
     
     Student *student = self.studentArray[indexPath.row];
     cell.textLabel.text = student.name;
+    NSData *data = [NSData dataWithContentsOfFile:[[self documentsDirectoryPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", student.name]]];
+    if (data) {
+        cell.imageView.image = [UIImage imageWithData:data];
+    }
+    
+    cell.imageView.layer.cornerRadius = 22;
+    cell.imageView.layer.masksToBounds = YES;
     
     return cell;
 }

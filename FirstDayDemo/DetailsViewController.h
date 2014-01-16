@@ -10,7 +10,5 @@
 
 @interface DetailsViewController : UIViewController
 @property (strong, nonatomic) NSString *studentName;
-@property (strong, nonatomic) NSString *instructorName;
-@property (nonatomic) int section;
 
 @end
