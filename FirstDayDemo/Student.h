@@ -12,5 +12,8 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *twitter;
 @property (strong, nonatomic) NSString *github;
+@property (strong, nonatomic) NSString *imagePath;
 @property (strong, nonatomic) UIImage *image;
 @end
+
+

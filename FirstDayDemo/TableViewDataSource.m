@@ -8,6 +8,7 @@
 
 #import "TableViewDataSource.h"
 #import "Student.h"
+#import "CodePeepsCell.h"
 
 @interface TableViewDataSource ()
 
@@ -36,6 +37,11 @@
         Student *student = [[Student alloc] init];
         student.name = [dict objectForKey:@"name"];
         
+        NSData *data = [NSData dataWithContentsOfFile:[[self documentsDirectoryPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",student.name]]];
+        
+        if (data) {
+            student.image = [UIImage imageWithData:data];
+        }
         [self.studentArray addObject:student];
     }
 }
@@ -45,6 +51,8 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Bootcamp" ofType:@"plist"];
     NSArray *plistArray = [NSArray arrayWithContentsOfFile:path];
     
+//    [[NSFileManager defaultManager] createDirectoryAtPath:[[self documentsDirectoryPath] stringByAppendingPathComponent:@"user_photos"] withIntermediateDirectories:NO attributes:nil error:nil];
+    
     return plistArray;
 
 }
@@ -53,6 +61,7 @@
 {
     NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     return [documentsURL path];
+
 }
 
 
@@ -72,17 +81,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
-    
-    Student *student = self.studentArray[indexPath.row];
-    cell.textLabel.text = student.name;
-    NSData *data = [NSData dataWithContentsOfFile:[[self documentsDirectoryPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", student.name]]];
-    if (data) {
-        cell.imageView.image = [UIImage imageWithData:data];
-    }
-    
-    cell.imageView.layer.cornerRadius = 22;
-    cell.imageView.layer.masksToBounds = YES;
+    CodePeepsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
+    cell.student = self.studentArray[indexPath.row];
     
     return cell;
 }

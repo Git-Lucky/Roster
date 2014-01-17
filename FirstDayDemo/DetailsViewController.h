@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Student.h"
 
 @interface DetailsViewController : UIViewController
-@property (strong, nonatomic) NSString *studentName;
+@property (weak, nonatomic) Student* student;
 
 @end

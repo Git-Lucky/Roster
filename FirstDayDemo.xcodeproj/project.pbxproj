@@ -23,6 +23,24 @@
 		0E32813318848B850082630E /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E32813218848B850082630E /* DetailsViewController.m */; };
 		0E3281361884AAEC0082630E /* CodePeepsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3281351884AAEC0082630E /* CodePeepsViewController.m */; };
 		0E3281391884D2800082630E /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3281381884D2800082630E /* Student.m */; };
+		0E374A161889E51D0032794E /* DetailsScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E374A151889E51D0032794E /* DetailsScrollView.m */; };
+		0E710F861888857C0077C8B6 /* CodePeepsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E710F851888857C0077C8B6 /* CodePeepsCell.m */; };
+		0EA8EED318884985003FB8B9 /* zuri Biringer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EEC318884985003FB8B9 /* zuri Biringer.jpg */; };
+		0EA8EED418884985003FB8B9 /* Yair Szarf.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EEC418884985003FB8B9 /* Yair Szarf.jpeg */; };
+		0EA8EED518884985003FB8B9 /* Spencer Fornaciari.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EEC518884985003FB8B9 /* Spencer Fornaciari.jpeg */; };
+		0EA8EED618884985003FB8B9 /* Richard lichkus.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EEC618884985003FB8B9 /* Richard lichkus.jpeg */; };
+		0EA8EED718884985003FB8B9 /* Raghav Haran.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EEC718884985003FB8B9 /* Raghav Haran.png */; };
+		0EA8EED818884985003FB8B9 /* Nicholas Barnard.png.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EEC818884985003FB8B9 /* Nicholas Barnard.png.jpeg */; };
+		0EA8EED918884985003FB8B9 /* Matt Remick.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EEC918884985003FB8B9 /* Matt Remick.jpeg */; };
+		0EA8EEDA18884985003FB8B9 /* John Clem.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EECA18884985003FB8B9 /* John Clem.jpeg */; };
+		0EA8EEDB18884985003FB8B9 /* Jeff Schwab.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EECB18884985003FB8B9 /* Jeff Schwab.jpeg */; };
+		0EA8EEDC18884985003FB8B9 /* Ivan Storck.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EECC18884985003FB8B9 /* Ivan Storck.jpeg */; };
+		0EA8EEDD18884985003FB8B9 /* Ivan Lesko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EECD18884985003FB8B9 /* Ivan Lesko.jpg */; };
+		0EA8EEDE18884985003FB8B9 /* Christopher Meehan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EECE18884985003FB8B9 /* Christopher Meehan.jpg */; };
+		0EA8EEDF18884985003FB8B9 /* Chad Colby.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EECF18884985003FB8B9 /* Chad Colby.jpeg */; };
+		0EA8EEE018884985003FB8B9 /* Brad Johnson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EED018884985003FB8B9 /* Brad Johnson.jpg */; };
+		0EA8EEE118884985003FB8B9 /* Bennett_Lin_square_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EED118884985003FB8B9 /* Bennett_Lin_square_thumb.jpg */; };
+		0EA8EEE218884985003FB8B9 /* Andrew Rodgers.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA8EED218884985003FB8B9 /* Andrew Rodgers.png */; };
 		0EBF94161885E47D005A4F32 /* Bootcamp.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF94151885E47D005A4F32 /* Bootcamp.plist */; };
 		0EBF94191885F55E005A4F32 /* TableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF94181885F55E005A4F32 /* TableViewDataSource.m */; };
 /* End PBXBuildFile section */
@@ -61,6 +79,26 @@
 		0E3281351884AAEC0082630E /* CodePeepsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodePeepsViewController.m; sourceTree = "<group>"; };
 		0E3281371884D2800082630E /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		0E3281381884D2800082630E /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		0E374A141889E51D0032794E /* DetailsScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsScrollView.h; sourceTree = "<group>"; };
+		0E374A151889E51D0032794E /* DetailsScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsScrollView.m; sourceTree = "<group>"; };
+		0E710F841888857C0077C8B6 /* CodePeepsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodePeepsCell.h; sourceTree = "<group>"; };
+		0E710F851888857C0077C8B6 /* CodePeepsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodePeepsCell.m; sourceTree = "<group>"; };
+		0EA8EEC318884985003FB8B9 /* zuri Biringer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zuri Biringer.jpg"; sourceTree = "<group>"; };
+		0EA8EEC418884985003FB8B9 /* Yair Szarf.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Yair Szarf.jpeg"; sourceTree = "<group>"; };
+		0EA8EEC518884985003FB8B9 /* Spencer Fornaciari.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Spencer Fornaciari.jpeg"; sourceTree = "<group>"; };
+		0EA8EEC618884985003FB8B9 /* Richard lichkus.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Richard lichkus.jpeg"; sourceTree = "<group>"; };
+		0EA8EEC718884985003FB8B9 /* Raghav Haran.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Raghav Haran.png"; sourceTree = "<group>"; };
+		0EA8EEC818884985003FB8B9 /* Nicholas Barnard.png.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Nicholas Barnard.png.jpeg"; sourceTree = "<group>"; };
+		0EA8EEC918884985003FB8B9 /* Matt Remick.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Matt Remick.jpeg"; sourceTree = "<group>"; };
+		0EA8EECA18884985003FB8B9 /* John Clem.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "John Clem.jpeg"; sourceTree = "<group>"; };
+		0EA8EECB18884985003FB8B9 /* Jeff Schwab.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Jeff Schwab.jpeg"; sourceTree = "<group>"; };
+		0EA8EECC18884985003FB8B9 /* Ivan Storck.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ivan Storck.jpeg"; sourceTree = "<group>"; };
+		0EA8EECD18884985003FB8B9 /* Ivan Lesko.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ivan Lesko.jpg"; sourceTree = "<group>"; };
+		0EA8EECE18884985003FB8B9 /* Christopher Meehan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Christopher Meehan.jpg"; sourceTree = "<group>"; };
+		0EA8EECF18884985003FB8B9 /* Chad Colby.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Chad Colby.jpeg"; sourceTree = "<group>"; };
+		0EA8EED018884985003FB8B9 /* Brad Johnson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Brad Johnson.jpg"; sourceTree = "<group>"; };
+		0EA8EED118884985003FB8B9 /* Bennett_Lin_square_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bennett_Lin_square_thumb.jpg; sourceTree = "<group>"; };
+		0EA8EED218884985003FB8B9 /* Andrew Rodgers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Andrew Rodgers.png"; sourceTree = "<group>"; };
 		0EBF94151885E47D005A4F32 /* Bootcamp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Bootcamp.plist; sourceTree = "<group>"; };
 		0EBF94171885F55E005A4F32 /* TableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDataSource.h; sourceTree = "<group>"; };
 		0EBF94181885F55E005A4F32 /* TableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSource.m; sourceTree = "<group>"; };
@@ -130,8 +168,10 @@
 				0E3281351884AAEC0082630E /* CodePeepsViewController.m */,
 				0EBF94171885F55E005A4F32 /* TableViewDataSource.h */,
 				0EBF94181885F55E005A4F32 /* TableViewDataSource.m */,
-				0E3281371884D2800082630E /* Student.h */,
-				0E3281381884D2800082630E /* Student.m */,
+				0E374A141889E51D0032794E /* DetailsScrollView.h */,
+				0E374A151889E51D0032794E /* DetailsScrollView.m */,
+				0EB0D61B18899CED006673AD /* Views */,
+				0EB0D61C18899CF9006673AD /* Model */,
 				0E328111188460A70082630E /* Images.xcassets */,
 				0E328100188460A70082630E /* Supporting Files */,
 			);
@@ -141,6 +181,7 @@
 		0E328100188460A70082630E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0EA8EEC2188847C3003FB8B9 /* studentPics */,
 				0EBF94151885E47D005A4F32 /* Bootcamp.plist */,
 				0E328108188460A70082630E /* AppDelegate.h */,
 				0E328109188460A70082630E /* AppDelegate.m */,
@@ -168,6 +209,47 @@
 				0E328121188460A70082630E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0EA8EEC2188847C3003FB8B9 /* studentPics */ = {
+			isa = PBXGroup;
+			children = (
+				0EA8EEC318884985003FB8B9 /* zuri Biringer.jpg */,
+				0EA8EEC418884985003FB8B9 /* Yair Szarf.jpeg */,
+				0EA8EEC518884985003FB8B9 /* Spencer Fornaciari.jpeg */,
+				0EA8EEC618884985003FB8B9 /* Richard lichkus.jpeg */,
+				0EA8EEC718884985003FB8B9 /* Raghav Haran.png */,
+				0EA8EEC818884985003FB8B9 /* Nicholas Barnard.png.jpeg */,
+				0EA8EEC918884985003FB8B9 /* Matt Remick.jpeg */,
+				0EA8EECA18884985003FB8B9 /* John Clem.jpeg */,
+				0EA8EECB18884985003FB8B9 /* Jeff Schwab.jpeg */,
+				0EA8EECC18884985003FB8B9 /* Ivan Storck.jpeg */,
+				0EA8EECD18884985003FB8B9 /* Ivan Lesko.jpg */,
+				0EA8EECE18884985003FB8B9 /* Christopher Meehan.jpg */,
+				0EA8EECF18884985003FB8B9 /* Chad Colby.jpeg */,
+				0EA8EED018884985003FB8B9 /* Brad Johnson.jpg */,
+				0EA8EED118884985003FB8B9 /* Bennett_Lin_square_thumb.jpg */,
+				0EA8EED218884985003FB8B9 /* Andrew Rodgers.png */,
+			);
+			name = studentPics;
+			sourceTree = "<group>";
+		};
+		0EB0D61B18899CED006673AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E710F841888857C0077C8B6 /* CodePeepsCell.h */,
+				0E710F851888857C0077C8B6 /* CodePeepsCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0EB0D61C18899CF9006673AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E3281371884D2800082630E /* Student.h */,
+				0E3281381884D2800082630E /* Student.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,10 +328,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EA8EEE218884985003FB8B9 /* Andrew Rodgers.png in Resources */,
+				0EA8EEDB18884985003FB8B9 /* Jeff Schwab.jpeg in Resources */,
+				0EA8EED618884985003FB8B9 /* Richard lichkus.jpeg in Resources */,
+				0EA8EED518884985003FB8B9 /* Spencer Fornaciari.jpeg in Resources */,
 				0E328112188460A70082630E /* Images.xcassets in Resources */,
 				0EBF94161885E47D005A4F32 /* Bootcamp.plist in Resources */,
+				0EA8EEDD18884985003FB8B9 /* Ivan Lesko.jpg in Resources */,
+				0EA8EED718884985003FB8B9 /* Raghav Haran.png in Resources */,
+				0EA8EEE118884985003FB8B9 /* Bennett_Lin_square_thumb.jpg in Resources */,
+				0EA8EED318884985003FB8B9 /* zuri Biringer.jpg in Resources */,
+				0EA8EED918884985003FB8B9 /* Matt Remick.jpeg in Resources */,
 				0E328104188460A70082630E /* InfoPlist.strings in Resources */,
+				0EA8EED418884985003FB8B9 /* Yair Szarf.jpeg in Resources */,
+				0EA8EEDF18884985003FB8B9 /* Chad Colby.jpeg in Resources */,
 				0E32810D188460A70082630E /* Main.storyboard in Resources */,
+				0EA8EEDA18884985003FB8B9 /* John Clem.jpeg in Resources */,
+				0EA8EEDC18884985003FB8B9 /* Ivan Storck.jpeg in Resources */,
+				0EA8EEE018884985003FB8B9 /* Brad Johnson.jpg in Resources */,
+				0EA8EEDE18884985003FB8B9 /* Christopher Meehan.jpg in Resources */,
+				0EA8EED818884985003FB8B9 /* Nicholas Barnard.png.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,10 +367,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EBF94191885F55E005A4F32 /* TableViewDataSource.m in Sources */,
+				0E710F861888857C0077C8B6 /* CodePeepsCell.m in Sources */,
 				0E32813318848B850082630E /* DetailsViewController.m in Sources */,
 				0E32810A188460A70082630E /* AppDelegate.m in Sources */,
 				0E328106188460A70082630E /* main.m in Sources */,
 				0E3281361884AAEC0082630E /* CodePeepsViewController.m in Sources */,
+				0E374A161889E51D0032794E /* DetailsScrollView.m in Sources */,
 				0E3281391884D2800082630E /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

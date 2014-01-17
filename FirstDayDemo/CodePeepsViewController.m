@@ -32,7 +32,11 @@
 }
 
 - (IBAction)sortButton:(id)sender {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Sort", nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:@"Sort", nil];
     
     [actionSheet showInView:self.view];
 }
@@ -49,7 +53,11 @@
 {
     NSSortDescriptor *lastNameSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
     
-    self.dataSource.studentArray = [self.dataSource.studentArray sortedArrayUsingDescriptors:@[lastNameSortDescriptor]];
+    self.dataSource.studentArray = [[self.dataSource.studentArray sortedArrayUsingDescriptors:@[lastNameSortDescriptor]] mutableCopy];
+        
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:@"sort"];
+    [defaults synchronize];
 }
 
 
@@ -57,9 +65,16 @@
 {
     [super viewDidLoad];
     
+    NSUserDefaults *fetchDefaults = [NSUserDefaults standardUserDefaults];
+    BOOL sorted = [fetchDefaults boolForKey:@"sort"];
+    
     self.tableView.delegate = self;
     self.dataSource = [[TableViewDataSource alloc] init];
     self.tableView.dataSource = self.dataSource;
+    
+    if (sorted) {
+        [self sortStudents];
+    }
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
@@ -98,7 +113,7 @@
             NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
             DetailsViewController *destTVC = segue.destinationViewController;
                 Student *student = [self.dataSource.studentArray objectAtIndex:indexPath.row];
-                destTVC.studentName = student.name;
+                destTVC.student= student;
         }
     }
 }

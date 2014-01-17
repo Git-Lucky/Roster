@@ -17,7 +17,7 @@
     }
     
     self.name = [aDecoder decodeObjectForKey:@"name"];
-    self.image = [aDecoder decodeObjectForKey:@"image"];
+    self.imagePath = [aDecoder decodeObjectForKey:@"imagePath"];
     self.twitter = [aDecoder decodeObjectForKey:@"twitter"];
     self.github = [aDecoder decodeObjectForKey:@"github"];
     
@@ -26,10 +26,24 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:self.name forKey:@"name"];
-    [aCoder encodeObject:self.image forKey:@"image"];
+    [aCoder encodeObject:self.imagePath forKey:@"image"];
     [aCoder encodeObject:self.twitter forKey:@"twitter"];
     [aCoder encodeObject:self.github forKey:@"github"];
 }
 
+- (void)setImage:(UIImage *)image
+{
+    _image = image;
+    NSData *pngData = UIImagePNGRepresentation(_image);
+    NSString *pngPath = [[self documentsDirectoryPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",self.name]];
+    [pngData writeToFile:pngPath atomically:YES];
+    self.imagePath = pngPath;
+}
+
+- (NSString *)documentsDirectoryPath
+{
+    NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    return [documentsURL path];
+}
 
 @end

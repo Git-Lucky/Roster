@@ -16,62 +16,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WWF-wu-lqg">
-                                <rect key="frame" x="10" y="74" width="300" height="300"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgv-EE-tjG">
-                                <rect key="frame" x="86" y="426" width="97" height="30"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fz9-VH-hou" customClass="DetailsScrollView">
+                                <rect key="frame" x="-10" y="18" width="340" height="550"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="D8l-d4-pSz" id="n3p-fr-FFE"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nqb-eo-H78">
-                                <rect key="frame" x="86" y="464" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="D8l-d4-pSz" id="CxC-U2-cfM"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icf-wN-VSn">
-                                <rect key="frame" x="16" y="430" width="62" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Github" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLX-Oq-mkF">
-                                <rect key="frame" x="16" y="468" width="62" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HX9-JY-TIk">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="W5g-aG-NDO"/>
-                                    <barButtonItem systemItem="camera" id="hcm-MW-UUs">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Twitter" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgv-EE-tjG">
+                                        <rect key="frame" x="86" y="323" width="169" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="cameraButton:" destination="D8l-d4-pSz" id="idy-5A-5gA"/>
+                                            <outlet property="delegate" destination="D8l-d4-pSz" id="qFM-K6-Unn"/>
                                         </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="aqW-Ix-aRe"/>
-                                </items>
-                            </toolbar>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Github" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nqb-eo-H78">
+                                        <rect key="frame" x="86" y="361" width="169" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="D8l-d4-pSz" id="CxC-U2-cfM"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZx-XP-3IX">
+                                        <rect key="frame" x="20" y="0.0" width="300" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="DQY-EB-4h7"/>
+                                        </constraints>
+                                        <state key="normal" title="Click to add image">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startPicker:" destination="D8l-d4-pSz" eventType="touchUpInside" id="fGz-Xe-dly"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dgv-EE-tjG" firstAttribute="leading" secondItem="fz9-VH-hou" secondAttribute="leading" constant="86" id="3Ib-dP-Hoo"/>
+                                    <constraint firstItem="nqb-eo-H78" firstAttribute="top" secondItem="dgv-EE-tjG" secondAttribute="bottom" constant="8" symbolic="YES" id="S7R-dl-ls0"/>
+                                    <constraint firstItem="dgv-EE-tjG" firstAttribute="centerX" secondItem="fz9-VH-hou" secondAttribute="centerX" id="Uxf-up-0c8"/>
+                                    <constraint firstItem="dgv-EE-tjG" firstAttribute="leading" secondItem="nqb-eo-H78" secondAttribute="leading" id="W6C-IN-5aF"/>
+                                    <constraint firstItem="dgv-EE-tjG" firstAttribute="top" secondItem="tZx-XP-3IX" secondAttribute="bottom" constant="23" id="Wib-Dz-ycr"/>
+                                    <constraint firstItem="tZx-XP-3IX" firstAttribute="centerX" secondItem="dgv-EE-tjG" secondAttribute="centerX" id="Zce-sr-c9F"/>
+                                    <constraint firstItem="tZx-XP-3IX" firstAttribute="top" secondItem="fz9-VH-hou" secondAttribute="top" id="aKG-RS-FCi"/>
+                                    <constraint firstAttribute="bottom" secondItem="nqb-eo-H78" secondAttribute="bottom" constant="159" id="erc-uy-GcT"/>
+                                    <constraint firstItem="tZx-XP-3IX" firstAttribute="leading" secondItem="fz9-VH-hou" secondAttribute="leading" constant="20" symbolic="YES" id="g6y-Z8-KAh"/>
+                                    <constraint firstItem="dgv-EE-tjG" firstAttribute="trailing" secondItem="nqb-eo-H78" secondAttribute="trailing" id="sUJ-nd-rXB"/>
+                                    <constraint firstAttribute="trailing" secondItem="tZx-XP-3IX" secondAttribute="trailing" constant="20" symbolic="YES" id="uc3-w5-DPd"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fz9-VH-hou" firstAttribute="top" secondItem="DYm-g3-e8Y" secondAttribute="top" constant="18" id="A2N-Gl-Xgq"/>
+                            <constraint firstItem="fz9-VH-hou" firstAttribute="centerX" secondItem="DYm-g3-e8Y" secondAttribute="centerX" id="gVX-Qn-TyA"/>
+                            <constraint firstItem="fz9-VH-hou" firstAttribute="leading" secondItem="DYm-g3-e8Y" secondAttribute="leading" constant="-10" id="mqI-pT-Rcl"/>
+                            <constraint firstAttribute="bottom" secondItem="fz9-VH-hou" secondAttribute="bottom" id="zqM-oE-Scc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dCr-8k-lio"/>
                     <connections>
                         <outlet property="githubTextField" destination="nqb-eo-H78" id="QC2-7O-aZB"/>
-                        <outlet property="imageOutlet" destination="WWF-wu-lqg" id="dMJ-bs-aQW"/>
+                        <outlet property="imageButton" destination="tZx-XP-3IX" id="3MG-0o-HrZ"/>
+                        <outlet property="myScrollView" destination="fz9-VH-hou" id="74J-bN-4Vo"/>
                         <outlet property="twitterTextField" destination="dgv-EE-tjG" id="69A-4Y-hu8"/>
                     </connections>
                 </viewController>
@@ -88,7 +96,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="P2H-ld-OfZ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="P2H-ld-OfZ" customClass="CodePeepsCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P2H-ld-OfZ" id="ShO-Fa-8Bl">
