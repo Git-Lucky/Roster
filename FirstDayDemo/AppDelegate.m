@@ -12,7 +12,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [self documentsDirectoryPath];
     // Override point for customization after application launch.
     return YES;
 }
@@ -42,16 +41,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-- (NSString *)documentsDirectoryPath
-{
-    NSArray *paths = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
-    NSURL *documentsURL = [paths lastObject];
-    NSLog(@"%@", paths);
-    
-    return [documentsURL path];
-    
 }
 
 

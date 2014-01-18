@@ -168,8 +168,6 @@
 				0E3281351884AAEC0082630E /* CodePeepsViewController.m */,
 				0EBF94171885F55E005A4F32 /* TableViewDataSource.h */,
 				0EBF94181885F55E005A4F32 /* TableViewDataSource.m */,
-				0E374A141889E51D0032794E /* DetailsScrollView.h */,
-				0E374A151889E51D0032794E /* DetailsScrollView.m */,
 				0EB0D61B18899CED006673AD /* Views */,
 				0EB0D61C18899CF9006673AD /* Model */,
 				0E328111188460A70082630E /* Images.xcassets */,
@@ -237,6 +235,8 @@
 		0EB0D61B18899CED006673AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0E374A141889E51D0032794E /* DetailsScrollView.h */,
+				0E374A151889E51D0032794E /* DetailsScrollView.m */,
 				0E710F841888857C0077C8B6 /* CodePeepsCell.h */,
 				0E710F851888857C0077C8B6 /* CodePeepsCell.m */,
 			);

@@ -7,15 +7,53 @@
 //
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "DetailsViewController.h"
+#import "TableViewDataSource.h"
 
 @interface DetailsViewController () <UITextFieldDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *imageButton;
 @property (weak, nonatomic) IBOutlet UITextField *twitterTextField;
 @property (weak, nonatomic) IBOutlet UITextField *githubTextField;
 @property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
+
 @end
 
 @implementation DetailsViewController
+
+- (void)viewDidLoad
+{
+    
+    [super viewDidLoad];
+    
+    [self loadStudentData];
+    
+    self.imageButton.layer.cornerRadius = 100;
+    self.imageButton.imageView.layer.cornerRadius = 50;
+    self.imageButton.layer.masksToBounds = YES;
+    self.imageButton.backgroundColor = [UIColor lightGrayColor];
+    
+    [self registerForKeyboardNotifications];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+    NSData *data = [NSData dataWithContentsOfFile:[[self documentsDirectoryPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",self.student.name]]];
+    if (data) {
+        self.student.image = [UIImage imageWithData:data];
+        [self.imageButton setBackgroundImage:self.student.image forState:UIControlStateNormal];
+    }
+    if (self.student.imagePath) {
+        [self.imageButton setTitle:@"" forState:UIControlStateNormal];
+    }
+    if (self.imageButton.imageView.image) {
+        self.imageButton.adjustsImageWhenHighlighted = NO;
+        //        [self.imageButton setUserInteractionEnabled:NO];
+    }
+}
+
+#pragma mark - photo Picker
 
 - (IBAction)startPicker:(id)sender {
     
@@ -44,7 +82,6 @@
     } else {
         return;
     }
-    
     [self presentViewController:imagePicker animated:YES completion:^{
     }];
 }
@@ -58,20 +95,13 @@
     [self dismissViewControllerAnimated:YES completion:^{
         
     }];
-    
-    
-    
-#pragma mark - Assests Library needs work to cease creating so many of the same copies
-//    ALAssetsLibrary *assetsLibrary = [ALAssetsLibrary new];
-//    if ([ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusDenied || [ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusRestricted) {
-//        return;
-//    } else {
-//        [assetsLibrary writeImageToSavedPhotosAlbum:editedImage.CGImage orientation:UIImageOrientationUp completionBlock:^(NSURL *assetURL, NSError *error) {
-//            if (error) {
-//                NSLog(@"%@", error);
-//            }
-//        }];
-//    }
+}
+
+- (void)loadStudentData
+{
+    self.title = self.student.name;
+    self.githubTextField.text = self.student.github;
+    self.twitterTextField.text = self.student.twitter;
 }
 
 - (NSString *)documentsDirectoryPath
@@ -80,29 +110,16 @@
     return [documentsURL path];
 }
 
-//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
+#pragma mark - delagate
 
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    NSLog(@"touches moved");
+    self.student.twitter = self.twitterTextField.text;
+    self.student.github = self.githubTextField.text;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"touches began");
-//    for (UIControl *control in self.view.subviews) {
-//        if ([control isKindOfClass:[UITextField class]]) {
-//            [control endEditing:YES];
-//        }
-//    }
     [self.twitterTextField resignFirstResponder];
     [self.githubTextField resignFirstResponder];
 }
@@ -111,45 +128,6 @@
 {
     [textField resignFirstResponder];
     return YES;
-}
-
-- (void)viewDidLoad
-{
-
-    [super viewDidLoad];
-    
-    self.title = self.student.name;
-    self.imageButton.layer.cornerRadius = 100;
-    self.imageButton.imageView.layer.cornerRadius = 50;
-    self.imageButton.layer.masksToBounds = YES;
-    self.imageButton.backgroundColor = [UIColor lightGrayColor];
-    
-    [self registerForKeyboardNotifications];
-    
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:YES];
-    
-    NSData *data = [NSData dataWithContentsOfFile:[[self documentsDirectoryPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",self.student.name]]];
-    if (data) {
-        self.student.image = [UIImage imageWithData:data];
-        [self.imageButton setBackgroundImage:self.student.image forState:UIControlStateNormal];
-    }
-    if (self.student.imagePath) {
-        [self.imageButton setTitle:@"" forState:UIControlStateNormal];
-    }
-    if (self.imageButton.imageView.image) {
-        self.imageButton.adjustsImageWhenHighlighted = NO;
-//        [self.imageButton setUserInteractionEnabled:NO];
-    }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Scrolling and Keyboard
@@ -183,6 +161,14 @@
     self.myScrollView.contentInset = UIEdgeInsetsZero;
     [self.myScrollView setContentOffset:CGPointMake(0, -60) animated:YES];
 //    self.myScrollView.scrollIndicatorInsets = contentInsets;
+}
+
+#pragma mark - memory warning
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 

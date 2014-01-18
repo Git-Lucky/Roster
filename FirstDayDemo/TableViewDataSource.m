@@ -23,12 +23,30 @@
     
     if (self = [super init])
     {
-        self.studentArray = [NSMutableArray new];
-        
-        self.plistData = [self convertPlist];
-        [self parsePlistArray];
+        self.studentArray = [self load];
+        if (self.studentArray) {
+            for (Student *student in self.studentArray){
+                NSData *data = [NSData dataWithContentsOfFile:[[self documentsDirectoryPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",student.name]]];
+                if (data) {
+                    student.image = [UIImage imageWithData:data];
+                }
+            }
+            
+            NSLog(@"Unarchive success");
+        } else {
+            NSLog(@"No archive, creating new array with archive");
+            self.studentArray = [NSMutableArray new];
+            self.plistData = [self convertPlist];
+            [self parsePlistArray];
+            [self convertToArchive];
+        }
     }
     return self;
+}
+
+- (void)convertToArchive
+{
+    [self save];
 }
 
 -(void)parsePlistArray
@@ -50,12 +68,21 @@
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Bootcamp" ofType:@"plist"];
     NSArray *plistArray = [NSArray arrayWithContentsOfFile:path];
-    
-//    [[NSFileManager defaultManager] createDirectoryAtPath:[[self documentsDirectoryPath] stringByAppendingPathComponent:@"user_photos"] withIntermediateDirectories:NO attributes:nil error:nil];
-    
+        
     return plistArray;
 
 }
+
+- (BOOL)save
+{
+    return [NSKeyedArchiver archiveRootObject:self.studentArray toFile:[self archivedStudentsPath]];
+}
+
+- (NSMutableArray *)load
+{
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:[self archivedStudentsPath]];
+}
+
 
 - (NSString *)documentsDirectoryPath
 {
@@ -64,7 +91,10 @@
 
 }
 
-
+- (NSString *)archivedStudentsPath
+{
+    return [[self documentsDirectoryPath] stringByAppendingPathComponent:@"archive"];
+}
 
 #pragma mark - Table view data source
 

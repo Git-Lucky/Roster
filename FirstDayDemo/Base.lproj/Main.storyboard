@@ -121,10 +121,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="hiddenTextField" destination="EEU-QH-6bt" id="yRu-Vk-Se1"/>
                         <outlet property="tableView" destination="gFa-g4-t61" id="giL-uM-Thq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynq-ty-m8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <textField hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="EEU-QH-6bt">
+                    <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </objects>
             <point key="canvasLocation" x="1297" y="12"/>
         </scene>

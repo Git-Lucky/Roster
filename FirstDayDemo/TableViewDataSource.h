@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) NSMutableArray *studentArray;
 
+- (BOOL)save;
+
 @end

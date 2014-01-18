@@ -10,6 +10,7 @@
 #import "Student.h"
 
 @interface DetailsViewController : UIViewController
+
 @property (weak, nonatomic) Student* student;
 
 @end
